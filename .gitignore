@@ -1,4 +1,16 @@
+# Terraform local dirs
+**/.terraform/
+
+# Terraform state
 *.tfstate
 *.tfstate.*
 
-*.terraform*
+# Lock files (auto-generated, not needed in Git unless you want provider versions pinned)
+.terraform.lock.hcl
+
+# Terraform plans
+*.tfplan
+
+# Crash logs
+crash.log
+crash.*.log
