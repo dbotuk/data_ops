@@ -5,6 +5,30 @@ variable "project_id" {
   default     = "white-dispatch-472608-b1"
 }
 
+variable "dataset_id" {
+  description = "Dataset name to create."
+  type        = string
+  default     = "dataset_dataops"
+}
+
+variable "bucket_name" {
+  description = "Bucket name to create."
+  type        = string
+  default     = "bucket-dataops"
+}
+
+variable "class" {
+  description = "Default storage class to create."
+  type        = string
+  default     = "STANDARD"
+}
+
+variable "location" {
+  description = "Location to place bucket at."
+  type        = string
+  default     = "US"
+}
+
 variable "region" {
   description = "Region to place compute resources at."
   type        = string

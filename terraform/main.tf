@@ -19,3 +19,17 @@ resource "google_compute_instance" "dataops_vm_instance" {
 	tags = ["ssh", "devops-course"]
 	
 }
+
+resource "google_bigquery_dataset" "dataset" {
+  dataset_id                  = var.dataset_id
+  location                    = var.location
+  default_table_expiration_ms = 3600000
+}
+
+resource "google_storage_bucket" "static" {
+ name          = var.bucket_name
+ location      = var.location
+ storage_class = var.class
+
+ uniform_bucket_level_access = true
+}
